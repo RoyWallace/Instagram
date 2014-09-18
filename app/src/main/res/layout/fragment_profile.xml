@@ -1,0 +1,43 @@
+<etong.instagram.CircleCanvasLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="etong.instagram.ProfileFragment">
+    <RelativeLayout
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/profileView"
+        android:background="@color/tabblue">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shadow_down" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profileView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/theme_color">
+
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/image_background"
+            android:src="@drawable/image1"/>
+
+    </RelativeLayout>
+
+
+
+
+</etong.instagram.CircleCanvasLayout>

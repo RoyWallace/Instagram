@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#265a82</color>
+    <color name="white">#ffffff</color>
+    <color name="background_gray">#ededed</color>
+    <color name="line_gray">#ededed</color>
+    <color name="green">#00ad51</color>
+    <color name="tabblue">#17b7db</color>
+
+</resources>
