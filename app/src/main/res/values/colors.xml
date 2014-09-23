@@ -4,6 +4,7 @@
     <color name="white">#ffffff</color>
     <color name="background_gray">#ededed</color>
     <color name="line_gray">#ededed</color>
+    <color name="text_gray">#363636</color>
     <color name="green">#00ad51</color>
     <color name="tabblue">#17b7db</color>
 

@@ -3,14 +3,19 @@ package etong.instagram;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.nineoldandroids.animation.ObjectAnimator;
 
@@ -23,7 +28,7 @@ import com.nineoldandroids.animation.ObjectAnimator;
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements View.OnTouchListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,7 +43,9 @@ public class ProfileFragment extends Fragment {
 
     private RelativeLayout profileView;
 
-    private RelativeLayout tabView;
+    private LinearLayout tabView;
+
+    private View lineView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -94,7 +101,15 @@ public class ProfileFragment extends Fragment {
 
     private void findAllView() {
         profileView = (RelativeLayout) circleCanvasLayout.findViewById(R.id.profileView);
-        tabView = (RelativeLayout) circleCanvasLayout.findViewById(R.id.tabView);
+        tabView = (LinearLayout) circleCanvasLayout.findViewById(R.id.tabView);
+        lineView = circleCanvasLayout.findViewById(R.id.lineView);
+        ImageView avatarImageView = (ImageView) circleCanvasLayout.findViewById(R.id.avatar_imageView);
+        avatarImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(),"Avatar!!!",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -118,6 +133,11 @@ public class ProfileFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        return true;
     }
 
     /**
@@ -145,10 +165,17 @@ public class ProfileFragment extends Fragment {
         Animation animation = new TranslateAnimation(0,0,-1000,0);
         animation.setDuration(1000);
         profileView.startAnimation(animation);
+        lineView.startAnimation(animation);
 
         Animation animation2 = new TranslateAnimation(0,0,-1000,0);
         animation2.setDuration(1100);
         tabView.startAnimation(animation2);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        view.setOnTouchListener(this);
     }
 
 }

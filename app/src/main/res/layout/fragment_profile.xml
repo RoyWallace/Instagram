@@ -3,18 +3,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="etong.instagram.ProfileFragment">
-    <RelativeLayout
+
+
+
+    <LinearLayout
         android:id="@+id/tabView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/profileView"
+        android:orientation="horizontal"
         android:background="@color/tabblue">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/shadow_down" />
-    </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/phone"
+            android:id="@+id/tab_imageView1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/phone"
+            android:id="@+id/tab_imageView2" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/phone"
+            android:id="@+id/tab_imageView3" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/phone"
+            android:id="@+id/tab_imageView4" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/profileView"
@@ -26,7 +63,7 @@
         <ImageView
             android:layout_width="72dp"
             android:layout_height="72dp"
-            android:id="@+id/imageView"
+            android:id="@+id/avatar_imageView"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -35,9 +72,133 @@
             android:background="@drawable/image_background"
             android:src="@drawable/image1"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Joshua Bane"
+            android:id="@+id/nickName_textView"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/avatar_imageView"
+            android:layout_toRightOf="@+id/avatar_imageView"
+            android:layout_toEndOf="@+id/avatar_imageView"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="\@joshuabane"
+            android:id="@+id/at_textView"
+            android:textColor="@color/line_gray"
+            android:layout_below="@+id/nickName_textView"
+            android:layout_alignLeft="@+id/nickName_textView"
+            android:layout_alignStart="@+id/nickName_textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Reviewer Writer www.bane-tech.com"
+            android:id="@+id/mainStation_textView"
+
+            android:textColor="@color/line_gray"
+            android:layout_below="@+id/at_textView"
+            android:layout_alignLeft="@+id/at_textView"
+            android:layout_alignStart="@+id/at_textView" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:text="Following"
+            android:id="@+id/followButton"
+            android:textColor="@color/white"
+            android:background="@drawable/followbtn_background"
+            android:layout_marginTop="8dp"
+            android:textSize="14dp"
+            android:layout_below="@+id/mainStation_textView"
+            android:layout_alignLeft="@+id/mainStation_textView"
+            android:layout_alignStart="@+id/mainStation_textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="followers"
+            android:textColor="@color/white"
+            android:id="@+id/followers_textView"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="396"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/followersNumber_textView"
+            android:layout_above="@+id/followers_textView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="1167"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/postsNumber_textView"
+            android:layout_above="@+id/posts_textView"
+            android:layout_alignRight="@+id/posts_textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="posts"
+            android:id="@+id/posts_textView"
+            android:layout_marginRight="54dp"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/followers_textView"
+            android:layout_toLeftOf="@+id/followers_textView"
+            android:layout_toStartOf="@+id/followers_textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="following"
+            android:id="@+id/following_textView"
+            android:layout_marginLeft="54dp"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/followers_textView"
+            android:layout_toRightOf="@+id/followers_textView"
+            android:layout_toEndOf="@+id/followers_textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="485"
+            android:textColor="@color/white"
+            android:id="@+id/followingNumber_textView"
+            android:layout_alignTop="@+id/followersNumber_textView"
+            android:layout_alignLeft="@+id/following_textView" />
+
     </RelativeLayout>
 
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/profileView"
+        android:background="@drawable/shadow_down" />
 
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabView"></GridView>
 
 
 </etong.instagram.CircleCanvasLayout>

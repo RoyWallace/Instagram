@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.method.Touch;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -139,9 +142,12 @@ public class MomentListFragment extends Fragment {
 
 
     public void doAnim(){
-        ObjectAnimator listAnimator = ObjectAnimator.ofFloat(contentView,"translationY",1000,0);
-        listAnimator.setDuration(800);
-        listAnimator.start();
+
+        Animation animation = new TranslateAnimation(0,0,1000,0);
+        animation.setDuration(1000);
+        animation.setStartTime(1000);
+        listView.startAnimation(animation);
+        listView.setVisibility(View.VISIBLE);
     }
 
 }

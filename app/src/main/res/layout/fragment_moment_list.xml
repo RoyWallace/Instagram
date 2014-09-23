@@ -15,6 +15,7 @@
         android:paddingRight="16dp"
         android:scrollbarStyle="outsideOverlay"
         android:smoothScrollbar="true"
+        android:visibility="invisible"
         android:divider="@null" />
 
 </FrameLayout>
