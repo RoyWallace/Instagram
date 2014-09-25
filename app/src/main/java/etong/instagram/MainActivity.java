@@ -77,6 +77,7 @@ public class MainActivity extends FragmentActivity implements MomentListFragment
         leftImageView = (ImageView) findViewById(R.id.left_imageView);
         rightImageView = (ImageView) findViewById(R.id.right_imageView);
         centerText = (TextView) findViewById(R.id.center_textView);
+        centerText.setSelected(true);
         leftImageView = (ImageView) findViewById(R.id.left_imageView);
         menuListView = (ListView) findViewById(R.id.menuListView);
         menuAvatar = (ImageView) findViewById(R.id.menu_avatar_imageView);

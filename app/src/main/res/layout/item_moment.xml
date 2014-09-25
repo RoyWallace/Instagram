@@ -86,22 +86,21 @@
         android:layout_alignBottom="@+id/comment_imageView"
         android:layout_toRightOf="@+id/comment_imageView" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+    <TextSwitcher
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/favorIcon_imageView"
         android:layout_marginRight="24dp"
         android:text="12 likes"
         android:textColor="@color/theme_color"
         android:id="@+id/favorNo_textView"
-        android:layout_below="@+id/comment_textView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        />
 
     <ImageView
         android:layout_width="16dp"
         android:layout_height="16dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:id="@+id/favorIcon_imageView"
         android:src="@drawable/phone"
         android:layout_below="@+id/comment_textView"
