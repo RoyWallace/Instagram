@@ -101,6 +101,7 @@ public class MomentAdapter extends BaseAdapter implements ViewSwitcher.ViewFacto
             }
         });
 
+
         holder.avatarIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
